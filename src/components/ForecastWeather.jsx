@@ -1,5 +1,5 @@
 //Display the 7 day weather data from the weather api returned data array
-export default function ForecastWeather({dailyforecast}) {
+export default function ForecastWeather({dailyforecast, getImageURL}) {
     //console.log("Forecast Weather")
     //console.log(dailyforecast)
     const daily = dailyforecast.map(function(data, index) {
@@ -8,7 +8,7 @@ export default function ForecastWeather({dailyforecast}) {
             return (
                 <div key={data.valid_date} className="m-3 p-3">
                 <h2 className="font-medium text-sm">{new Date().toLocaleDateString("en-ca") == data.valid_date ? "Today" : "Tomorrow"}</h2>
-                <img src={`../src/assets/icons/${data.weather.code}/${data.weather.icon}.png`} className="size-16 m-auto" />
+                <img src={getImageURL(data.weather.code, data.weather.icon)} alt="weather-icon" className="size-16 m-auto" />
                 <p className="text-sm">H:{data.high_temp} L:{data.low_temp} </p>
                 </div>  
             )           
@@ -17,7 +17,7 @@ export default function ForecastWeather({dailyforecast}) {
             return (
                 <div key={data.valid_date} className="m-3 p-3">
                 <h2 className="font-medium text-sm">{new Date(data.valid_date).toLocaleDateString("en-us", {weekday: 'long', timeZone: 'UTC' })}</h2>
-                <img src={`../src/assets/icons/${data.weather.code}/${data.weather.icon}.png`} className="size-16 m-auto" />
+                <img src={getImageURL(data.weather.code, data.weather.icon)} alt="weather-icon" className="size-16 m-auto" />
                 <p className="text-sm">H:{data.high_temp} L:{data.low_temp} </p>
                 </div>  
             )

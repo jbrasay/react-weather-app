@@ -7,6 +7,11 @@ import ForecastWeather from "./ForecastWeather"
 export default function MainWeather({weatherdata, isValid}) {
     //console.log("Main Weather!")
     //console.log(weatherdata)
+    //Function to get the static icons
+    function getImageURL(code, icon) {
+        return new URL(`../assets/icons/${code}/${icon}.png`, import.meta.url).href
+    }
+
     if (isValid) {
         if (weatherdata.weatherarray.length == 0)
             {
@@ -20,8 +25,8 @@ export default function MainWeather({weatherdata, isValid}) {
             //Display Current Weather and daily forecast
             return (
                 <div className="h-3/5 mx-auto">
-                    <CurrentWeather currentweather={weatherdata.weatherarray[0]} citystate={weatherdata.citystate} country={weatherdata.country}/>
-                    <ForecastWeather dailyforecast={weatherdata.weatherarray} />
+                    <CurrentWeather currentweather={weatherdata.weatherarray[0]} citystate={weatherdata.citystate} country={weatherdata.country} getImageURL={getImageURL}/>
+                    <ForecastWeather dailyforecast={weatherdata.weatherarray} getImageURL={getImageURL} />
                 </div>
             )
         }

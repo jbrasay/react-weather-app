@@ -1,5 +1,5 @@
 //Displays current weather, this is the first data from the weather api data array 
-export default function CurrentWeather({currentweather, citystate, country}) {
+export default function CurrentWeather({currentweather, citystate, country, getImageURL}) {
     //console.log("Current Weather: ")
     //console.log(currentweather)
     const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }
@@ -15,7 +15,7 @@ export default function CurrentWeather({currentweather, citystate, country}) {
             </div>
             <div className="flex flex-col mt-4">
                 <h1 className="text-5xl font-semibold">{currentweather.weather.description}</h1>
-                <img src={`../src/assets/icons/${currentweather.weather.code}/${currentweather.weather.icon}.png`} className="m-auto size-32" />
+                <img src={getImageURL(currentweather.weather.code, currentweather.weather.icon)} alt="weather-icon" className="m-auto size-32"  />
             </div>
             <div className="text-sm">
                 <h3><span>H:{currentweather.high_temp}°F</span> | <span>L:{currentweather.low_temp}°F</span></h3>
