@@ -1,8 +1,9 @@
 //Displays current weather, this is the first data from the weather api data array 
 export default function CurrentWeather({currentweather, citystate, country, getImageURL}) {
-    //console.log("Current Weather: ")
-    //console.log(currentweather)
-    const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }
+
+    //Date format options
+    const options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' };
+
     return (
         <div className="flex flex-col m-4 p-4 h-3/5 text-white text-center text-lg bg-gradient-to-br from-violet-900 to-cyan-600 rounded-xl shadow-2xl">            
             <div className="flex flex-row justify-between px-10">

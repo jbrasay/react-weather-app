@@ -1,7 +1,5 @@
-//Display the 7 day weather data from the weather api returned data array
+//Display the 7 day weather data retrieved using the weather api
 export default function ForecastWeather({dailyforecast, getImageURL}) {
-    //console.log("Forecast Weather")
-    //console.log(dailyforecast)
     const daily = dailyforecast.map(function(data, index) {
         //First data is the current weather, displays today or tomorrow depending on the search location and local timezone
         if (index == 0) {
@@ -32,7 +30,6 @@ export default function ForecastWeather({dailyforecast, getImageURL}) {
             <div className="flex flex-row text-center">
                 {daily}
             </div>
-
         </div>
     )
 }

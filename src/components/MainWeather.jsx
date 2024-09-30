@@ -1,16 +1,13 @@
-import CurrentWeather from "./CurrentWeather"
-import ForecastWeather from "./ForecastWeather"
-
+import CurrentWeather from "./CurrentWeather";
+import ForecastWeather from "./ForecastWeather";
 //Main Weather Component
 //Initial display a message to user and ask for zipcode, city, or country
 //Display weather data if input from user is valid, else display an invalid input message
 export default function MainWeather({weatherdata, isValid}) {
-    //console.log("Main Weather!")
-    //console.log(weatherdata)
-    //Function to get the static icons
+
     function getImageURL(code, icon) {
         return new URL(`../assets/icons/${code}/${icon}.png`, import.meta.url).href
-    }
+    };
 
     if (isValid) {
         if (weatherdata.weatherarray.length == 0)
@@ -38,7 +35,5 @@ export default function MainWeather({weatherdata, isValid}) {
             </div>
         )
     }
- 
-
     
 }
