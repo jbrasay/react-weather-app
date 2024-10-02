@@ -2,6 +2,9 @@
 
 A simple weather application that retrieves real-time weather information based on a city, country, or ZIP code. This project was created to enhance my understanding of the React JavaScript library and the Tailwind CSS framework
 
+
+[Live Demo!](https://jbrasay-react-weather-app.netlify.app/)
+
 ## Features
 
 - **Location-based Weather**: Input a city name, country, or ZIP code to get the weather information.
@@ -38,3 +41,4 @@ VITE_WEATHERBIT_API_KEY=your_weatherbit_api_key
 ```bash
 npm run dev
 ```
+
