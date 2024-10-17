@@ -1,25 +1,39 @@
-import React, {useState} from 'react';
-import Search from './components/Search';
-import LoadingScreen from './components/LoadingScreen';
-import MainWeather from './components/MainWeather';
+import React, {useReducer, useState} from 'react';
+
+//Import Components
+import LoadingScreen from './components/loader/LoadingScreen';
+import Header from './components/Header'
+import ShowWeather from './components/ShowWeather';
+
+//Import Context
+import WeatherContext from './context/WeatherContext';
+import SearchContext from './context/SearchContext'
+//Import Reducer
+import weatherReducer from './reducer/weatherReducer';
 
 export default function App() {
 
-  //Store weather information retrieve via Weatherbit API
-  const [weather, setWeather] = useState({
-    citystate: "",
+  //Store weather information retrieve via OpenWeather
+  const [weather, weatherDispatch] = useReducer(weatherReducer, {
     country: "",
-    weatherarray: []
+    city: "",
+    timeZone: "",
+    weatherData: []
   });
+
+  const [isSearching, setIsSearching] = useState(false); //Check to see if user is searching, display searching message if true
   
-  const [isLoading, setisLoading] = useState(false); //Check to see if user is searching, display searching message if true
   const [isValid, setisValid] = useState(true); //Check to see if user input is valid, display invalid search message if false
 
   return (
-   <div className="h-screen flex flex-col font-mono bg-gradient-to-br from-gray-500 to-zinc-900">
-      <Search setWeather={setWeather} setisLoading={setisLoading} setisValid={setisValid}/>
-      {isLoading ? <LoadingScreen /> : <MainWeather weatherdata={weather} isValid={isValid}/>}
-   </div>
-    
+    <WeatherContext.Provider value={{weather, weatherDispatch}}>
+      <SearchContext.Provider value={{setIsSearching}}>
+        <div className="w-full h-full flex flex-col font-serif overflow-y-auto bg-gradient-to-r from-violet-600 to-indigo-600">
+          <Header />
+          {isSearching ? <LoadingScreen/>: <ShowWeather />}
+        </div>
+      </SearchContext.Provider>
+    </WeatherContext.Provider>
   )
 }
+
