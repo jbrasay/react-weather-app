@@ -1,9 +1,14 @@
 # React Weather App
 
-A simple weather application that retrieves real-time weather information based on a city or ZIP code. This project was created to enhance my understanding of the React JavaScript library and the Tailwind CSS framework
+A weather application that fetches real-time weather information based on a city name or ZIP code. This project showcases my skills with React and Tailwind CSS, integrating external APIs and animations to create a dynamic web application.
 
 
 [Live Demo!](https://jbrasay-react-weather-app.netlify.app/)
+
+<p align="middle">
+    <img src="https://github.com/jbrasay/project-screenshots/blob/f1f56da0ffe772fb27c5fd6d828018636b844715/screenshots/weather-app/Weather-App-1.png" width="400" height="400">
+    <img src="https://github.com/jbrasay/project-screenshots/blob/f1f56da0ffe772fb27c5fd6d828018636b844715/screenshots/weather-app/Weather-App-2.png" width="400" height="400">
+</p>
 
 ## Features
 
@@ -13,12 +18,12 @@ A simple weather application that retrieves real-time weather information based 
 
 ## Technologies
 
-- **Frontend**: React.js for building a dynamic, component-based user interface.
-- **Styling**: Tailwind CSS for fast and efficient styling.
-- **APIs**: Geoapify API and Weatherbit API for geolocation and weather data.
+- **Frontend**: Built with the React JavaScript library for a dynamic user experience.
+- **Styling**: Styled using the Tailwind CSS framework for fast and efficient styling.
+- **APIs**: [Geoapify Geocoding API](https://www.geoapify.com/) and [Weatherbit API](https://www.weatherbit.io/) for geolocation and weather data.
 - **Data Fetching**: AXIOS for making API requests.
 - **Animations**: Framer Motion for adding animations.
-- **Icons**: Meteocons for animated weather icons.
+- **Icons**: [Meteocons](https://bas.dev/work/meteocons) for animated weather icons.
 
 Also uses AXIOS for fetching api, Framer motion for simple animation and [Meteocons!](https://bas.dev/work/meteocons) for animated weather icons.
 
