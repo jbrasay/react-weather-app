@@ -13,7 +13,7 @@ export default function ShowWeather() {
                     <ForecastWeather/>
                 </div>) : 
                 (<div className="p-20 text-center text-white text-bold sm:text-4xl xs:text-lg">
-                    <h1>Would you like to see the weather? Type a Country, City, or Zip Code!</h1>
+                    <h1>Would you like to see the weather? Type a City or Zip Code!</h1>
                 </div>)
             }
         </>

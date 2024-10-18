@@ -8,7 +8,7 @@ export default function LoadingScreen() {
                 animate={{scale: 1}}
                 transition={{repeat: Infinity , repeatType: "mirror", duration: 3}} 
             >
-            Searching....</motion.h1>
+            Searching...</motion.h1>
         </div>
     )
 }

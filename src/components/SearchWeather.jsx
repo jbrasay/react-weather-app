@@ -1,7 +1,12 @@
+//Import react hooks
 import { useContext, useState } from "react";
+//Import axios
 import axios from "axios";
+//Import framer motion
 import { motion } from "framer-motion";
+//Import react icons
 import { IoIosSearch } from "react-icons/io";
+//Import context
 import WeatherContext from "../context/WeatherContext";
 import SearchContext from "../context/SearchContext";
 

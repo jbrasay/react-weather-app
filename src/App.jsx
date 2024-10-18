@@ -28,7 +28,7 @@ export default function App() {
   return (
     <WeatherContext.Provider value={{weather, weatherDispatch}}>
       <SearchContext.Provider value={{setIsSearching}}>
-        <div className="w-full h-full flex flex-col font-serif overflow-y-auto bg-gradient-to-r from-violet-600 to-indigo-600">
+        <div className="w-full h-full flex flex-col font-serif overflow-y-auto overflow-x-hidden bg-gradient-to-r from-violet-600 to-indigo-600">
           <Header />
           {isSearching ? <LoadingScreen/>: <ShowWeather />}
         </div>
