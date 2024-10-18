@@ -1,6 +1,6 @@
 # React Weather App
 
-A simple weather application that retrieves real-time weather information based on a city, country, or ZIP code. This project was created to enhance my understanding of the React JavaScript library and the Tailwind CSS framework
+A simple weather application that retrieves real-time weather information based on a city or ZIP code. This project was created to enhance my understanding of the React JavaScript library and the Tailwind CSS framework
 
 
 [Live Demo!](https://jbrasay-react-weather-app.netlify.app/)
@@ -13,8 +13,14 @@ A simple weather application that retrieves real-time weather information based 
 
 ## Technologies
 
-- **Frontend**: Built with the React JavaScript library for a dynamic user experience.
-- **Styling**: Styled using the Tailwind CSS framework.
+- **Frontend**: React.js for building a dynamic, component-based user interface.
+- **Styling**: Tailwind CSS for fast and efficient styling.
+- **APIs**: Geoapify API and Weatherbit API for geolocation and weather data.
+- **Data Fetching**: AXIOS for making API requests.
+- **Animations**: Framer Motion for adding animations.
+- **Icons**: Meteocons for animated weather icons.
+
+Also uses AXIOS for fetching api, Framer motion for simple animation and [Meteocons!](https://bas.dev/work/meteocons) for animated weather icons.
 
 ## Project Setup
 1. Clone the repository:
@@ -28,12 +34,11 @@ cd react-weather-app
 3. Install dependencies:
 ```bash
 npm install
-npm install -D tailwindcss postcss autoprefixer
 ```
 4. Set up your environment variables: Create a .env file in the root directory and add your API keys from Geoapify and Weatherbit:
 ```
 VITE_GEOAPI_API_KEY=your_geoapify_api_key
-VITE_WEATHERBIT_API_KEY=your_weatherbit_api_key
+VITE_WEATHER_API_KEY=your_weatherbit_api_key
 ```
 
 ## Starting Project
