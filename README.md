@@ -25,8 +25,6 @@ A weather application that fetches real-time weather information based on a city
 - **Animations**: Framer Motion for adding animations.
 - **Icons**: [Meteocons](https://bas.dev/work/meteocons) for animated weather icons.
 
-Also uses AXIOS for fetching api, Framer motion for simple animation and [Meteocons!](https://bas.dev/work/meteocons) for animated weather icons.
-
 ## Project Setup
 1. Clone the repository:
 ```bash
